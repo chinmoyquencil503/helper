@@ -24,7 +24,7 @@ router.post("/add", async (req, res, next) => {
 
 router.get("/show-all", async (req, res, next) => {
   const name = req.body;
-  data_model.find({}, function (err, docs) {
+  await data_model.find({}, function (err, docs) {
     if (err) {
       console.log(err);
     } else {
